@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseItem
+  id: NanoTransactionsCartridge
+  name: NanoTransactions cartridge
+  description: Lets you manage your Spesos!
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Devices/cartridge.rsi
+    state: cart-chat
+  - type: UIFragment
+    ui: !type:NanoTransactionsUI
+  - type: NanoTransactionsCartridge
+  - type: Cartridge
+    programName: nano-transactions-program-name
+    icon:
+      sprite: _Omu/Misc/nano_transaction.rsi
+      state: nano_transaction
+  - type: ActiveRadio
+    channels:
+    - Common

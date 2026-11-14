@@ -1,0 +1,109 @@
+<cartridges:NanoTransactionsUiFragment
+    xmlns="https://spacestation14.io"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cartridges="clr-namespace:Content.Client._Omu.CartridgeLoader.Cartridges"
+    xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
+    x:Class="Content.Client._Omu.CartridgeLoader.Cartridges.NanoTransactionsUiFragment"
+    xmlns:ui="clr-namespace:Content.Client.Options.UI"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    Margin="5"
+    VerticalExpand="True">
+
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+        <!-- A parent container to hold the balance label and main content -->
+        <BoxContainer Orientation="Vertical">
+            <!-- Header Section: Title -->
+            <PanelContainer StyleClasses="AngleRect">
+                <BoxContainer Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Label Name="Balance"
+                            Text="{Loc nano-transactions-balance}"
+                            StyleClasses="ConsoleSubHeading"/>
+                </BoxContainer>
+            </PanelContainer>
+
+            <!-- Horizontal line under header -->
+            <customControls:HSeparator Margin="5 3 5 5"/>
+
+            <!-- Main content -->
+            <PanelContainer StyleClasses="AngleRect">
+                <!-- Container to Hold the 2 Horizontal Containers -->
+                <BoxContainer Orientation="Horizontal">
+                    <!-- Container for the Player List -->
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True" HorizontalAlignment="Center">
+                        <Label Name="PlayerListTitle"
+                               Text="Valid Player List"
+                               Visible="True"
+                               StyleClasses="ConsoleText"/>
+                        <PanelContainer StyleClasses="AngleRect"
+                                        VerticalExpand="True"
+                                        MinHeight="185"
+                                        Margin="0 3 0 0">
+                            <PanelContainer.PanelOverride>
+                                <gfx:StyleBoxFlat BorderThickness="1" BorderColor="DimGray" />
+                            </PanelContainer.PanelOverride>
+                            <ScrollContainer VerticalExpand="True"
+                                             HorizontalExpand="True"
+                                             HScrollEnabled="False">
+                                <BoxContainer Name="PlayerList"
+                                              Orientation="Vertical"
+                                              VerticalExpand="True"
+                                              HorizontalExpand="True">
+                                    <!-- Chat entries will be added here dynamically -->
+                                    <Label Name="NoPlayerLabel"
+                                           Text="No Players"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           StyleClasses="LabelSubText" />
+                                </BoxContainer>
+                            </ScrollContainer>
+                        </PanelContainer>
+                        <!-- Container for the Money Send Confirms -->
+                        <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                            <BoxContainer Orientation="Horizontal" >
+                                <CheckBox Name="MoneySendOption" Text="Send" Margin="2"/>
+                                <CheckBox Name="MoneyRequestOption" Text="Request" Margin="2"/>
+                            </BoxContainer>
+                            <LineEdit Name="AmountEdit" Text="0"/>
+                            <Button Name="ConfirmButton"
+                                    Text="Confirm"
+                                    HorizontalAlignment="Center"
+                                    Visible="True"
+                                    StyleClasses="ConsoleText"/>
+                        </BoxContainer>
+                    </BoxContainer>
+                    
+                    <!-- Container for the Transaction History -->
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True" HorizontalAlignment="Center">
+                        <Label Name="HistoryTitle"
+                                Text="Transaction History"
+                                Visible="True"
+                                StyleClasses="ConsoleText"/>
+                        <PanelContainer StyleClasses="AngleRect"
+                                        VerticalExpand="True"
+                                        Margin="0 3 0 0">
+                            <PanelContainer.PanelOverride>
+                                <gfx:StyleBoxFlat BorderThickness="1" BorderColor="DimGray" />
+                            </PanelContainer.PanelOverride>
+                            <ScrollContainer VerticalExpand="True"
+                                             HorizontalExpand="True"
+                                             HScrollEnabled="False">
+                                <BoxContainer Name="HistoryList"
+                                              Orientation="Vertical"
+                                              VerticalExpand="True"
+                                              HorizontalExpand="True">
+                                    <!-- Chat entries will be added here dynamically -->
+                                    <Label Name="NoHistoryLabel"
+                                           Text="No History"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           StyleClasses="LabelSubText"
+                                           HorizontalExpand="True"/>
+                                </BoxContainer>
+                            </ScrollContainer>
+                        </PanelContainer>
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+        </BoxContainer>
+    </BoxContainer>
+</cartridges:NanoTransactionsUiFragment>

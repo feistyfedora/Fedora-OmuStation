@@ -89,6 +89,7 @@
       - NanoTaskCartridge
       - NewsReaderCartridge
       - NanoChatCartridge # DeltaV
+      - NanoTransactionsCartridge
     cartridgeSlot:
       priority: -1
       name: device-pda-slot-component-slot-name-cartridge
