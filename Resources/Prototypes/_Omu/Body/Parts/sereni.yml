@@ -1,0 +1,137 @@
+# TODO: Add descriptions (many)
+# TODO BODY: Part damage
+- type: entity
+  id: PartSereni
+  parent: [BaseItem, BasePart]
+  name: "sereni body part"
+  abstract: true
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+  - type: Damageable
+    damageModifierSet: Sereni
+
+- type: entity #Omu - Woundmed Compat
+  id: ChestSereni
+  name: "sereni chest"
+  parent: [PartSereni, BaseChest]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "chest_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity #Omu - Woundmed Compat
+  id: GroinSereni
+  name: "sereni groin"
+  parent: [PartSereni, BaseGroin]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "groin_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: Blood
+        Quantity: 20
+
+- type: entity
+  id: HeadSereni
+  name: "sereni head"
+  parent: [PartSereni, BaseHead]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "head_m"
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 5
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: LeftArmSereni
+  name: "left sereni arm"
+  parent: [PartSereni, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmSereni
+  name: "right sereni arm"
+  parent: [PartSereni, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandSereni
+  name: "left sereni hand"
+  parent: [PartSereni, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandSereni
+  name: "right sereni hand"
+  parent: [PartSereni, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: TailSereni
+  name: "sereni tail"
+  parent: [PartSereni, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: _Omu/Mobs/Species/Sereni/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegSereni
+  name: "right sereni leg"
+  parent: [PartSereni, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootSereni
+  name: "left sereni foot"
+  parent: [PartSereni, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootSereni
+  name: "right sereni foot"
+  parent: [PartSereni, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: "r_foot"

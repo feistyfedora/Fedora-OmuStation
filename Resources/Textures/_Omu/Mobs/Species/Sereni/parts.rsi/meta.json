@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/blob/b091789c079fe9156998090eb8c7a61bb10f7010/icons/mob/human/species/cerulean/cerulean_tails.dmi",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "l_leg",
+            "directions": 4
+        }
+    ]
+}

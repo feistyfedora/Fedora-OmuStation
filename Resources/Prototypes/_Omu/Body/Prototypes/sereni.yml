@@ -1,0 +1,55 @@
+- type: body
+  id: Sereni
+  name: sereni
+  root: chest
+  slots:
+    head:
+      part: HeadSereni
+      connections:
+      - chest
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    chest:
+      part: ChestSereni
+      connections:
+      - groin
+      - right arm
+      - left arm
+      - head # Shitmed
+      organs:
+        heart: OrganAnimalHeart
+        lungs: OrganAnimalLungs
+    groin:
+      part: GroinSereni
+      connections:
+      - right leg
+      - left leg
+      organs:
+        stomach: OrganHumanStomach
+        liver: OrganAnimalLiver
+        kidneys: OrganAnimalKidneys
+    right arm:
+      part: RightArmSereni
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmSereni
+      connections:
+      - left hand
+    right hand:
+      part: RightHandSereni
+    left hand:
+      part: LeftHandSereni
+    right leg:
+      part: RightLegSereni
+      connections:
+      - right foot
+    left leg:
+      part: TailSereni
+      connections:
+      - left foot
+    right foot:
+      part: RightFootSereni
+    left foot:
+      part: LeftFootSereni
